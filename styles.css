@@ -43,10 +43,11 @@
 
 
 body{
-    font-family: 'Poppins';
+    font-family: sans-serif;
     color: #fff;
+    /* background-color:#000; */
     /*padding-bottom:1000em;*/
-	overflow-x:hidden;  /*Para ocultar el desplazamiento horizontal*/
+	/*overflow-x:hidden;  Para ocultar el desplazamiento horizontal*/
 
 }
 
@@ -75,9 +76,20 @@ a{
 
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 /*-------------------------------- Barra de Navegacion ---------------------------*/
 
 #menu{
+    /* position:relative;
+    
+    align-self: top;  */
+    /* top:0;
+    left:0;
+    justify-self: flex-start !important; */
+    width:100%;
     border-bottom:1px solid #fff;
     box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
 	transition: all .5s;
@@ -148,10 +160,11 @@ nav.fixed {
 
 .banner-description{
     
-    padding-top: 100px;
     width:90%;
     max-width:1000px;
     margin:auto;
+    margin-top:20vh;
+    /* justify-self: center; */
     
 
 }
@@ -215,14 +228,30 @@ nav.fixed {
 /*---------------contenido del inicio----------------*/
 
 
+.contenido_inicio{
+	height:700px;
+}
+
+.contenido_inicio-descripcion{
+	height:700px;
+}
+
+.contenido_inicio-descripcion>.col{
+	height:700px;
+}
+
+.contenido-inicio-hovers>.row{
+    height:700px;
+}
+
 .bloque-prod{
     margin:auto;    /*Para centrar las tarjetas. Esto es importante para cuando cambie la resolucion de pantalla*/
     width: 295px;   /*Ancho, para cambiarlo debes cambiar el max-width tambien*/
-    max-width:295px;    /*Ancho maximo, esto es para que no se haga mas grande de 350px*/
+    /*max-width:295px;    /*Ancho maximo, esto es para que no se haga mas grande de 350px*/
     border-radius:10px;
     background:white;
     height:300px;   /*Alto de la tarjeta, para cambiarlo tenes que cambiar el max-height tambien*/
-    max-height:300px; /*Para que no se haga mas grande al hacer responsive. Si queres que sea mas largo tenes que cambiar esta propiedad tambien, junto con el height*/
+    /*max-height:300px; /*Para que no se haga mas grande al hacer responsive. Si queres que sea mas largo tenes que cambiar esta propiedad tambien, junto con el height*/
     transition: .3s;
     
 }
@@ -230,6 +259,7 @@ nav.fixed {
 .bloque-prod img{   /*Para que la imagen tenga las esquinas superiores redondeadas*/
     border-top-left-radius:10px;
     border-top-right-radius:10px;
+    width:100%;
 
 }
             /*-------Version alternariva del img-prod-------*/
@@ -258,12 +288,20 @@ nav.fixed {
     /*-----------Imagen de fondo--------------*/
 .contenido-inicio-hovers{
     background-image: url("img/fondo2.jpg");
-    background-size: 100%;
+    background-size: 120%;
     background-repeat: no-repeat;
     background-position:center;
 }
 
 /*----------------------------Pagina de Nosotros-------------------------*/
+
+.section-nosotros{
+	height:700px;
+}
+
+.section-nosotros>.container>.row{
+	height:700px;
+}
 
 .bannerNosotros{
     width: 100%;
@@ -290,15 +328,53 @@ nav.fixed {
 .etiqueta_sobreNosotros{
     box-shadow:1px 12px 15px -10px;
 }
+.etiqueta-horario{
+    background-color: var(--bs-light);
+}
 
-.etiqueta_sobreNosotros > .col-3{
+.etiqueta-horario>img{
+    display:none;
+}
+/* .etiqueta_sobreNosotros > .col-3{
     margin-top:10px;
     border: black;
     background-color: #000;
+} */
+
+
+
+.section-map{
+	height:700px;
+}
+.section-map>.container-fluid>.row{
+	height:700px;
+}
+.section-map>.container-fluid>.row>.d-flex{
+	height:700px;
+}
+
+iframe{
+	height:450px;
 }
 
 
 /*--------------------------- Pagina de Contacto -----------------------------*/
+
+.section-contact{
+	height:800px;
+}
+
+.section-contact>.container-fluid>.row{
+	height:800px;
+}
+
+.section-contact>.container-fluid>.row>.col{
+	height:800px;
+}
+
+.section-contact>.container-fluid>.row>.col>.row>.col{
+	height:800px;
+}
 
 .bannerContacto{
     width: 100%;
@@ -321,9 +397,14 @@ input.transparent-input{
 
 .formulario_contacto{
     box-shadow: 10px 15px 20px -10px #000;
+    width:70%;
 }
-textarea{
+
+.formulario_contacto textarea{
+    width:100%;
+    height:150px;
     padding:7px;
+
 }
 
 .iconos{
@@ -358,3 +439,424 @@ footer p{
     color:#f3f3f3;
 }
 
+
+
+/* ------------------------------------------Seccion de media querys------------------------------------------ */
+/* Escritorio extra grande */
+@media only screen and (min-width: 1200px){
+
+}
+
+/* Escritorio grande */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+
+/*----------------------------Pagina de Servicios-------------------------*/
+
+    /*-----------Imagen de fondo--------------*/
+    .contenido-inicio-hovers{
+        background-image: url("img/fondo2.jpg");
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+
+    /*----------------------------Pagina de Nosotros-------------------------*/
+
+    .etiqueta-horario{
+        width: 480px;
+        border:2px solid var(--bs-light);
+       
+        } 
+    
+    .etiqueta-horario>.table{
+        width:200px !important;
+
+    }
+    /*
+    .etiqueta-horario table p{
+        margin-top:0px !important;
+        margin-bottom: 0px !important;
+
+    } */
+    /*----------------------------Pagina de Contacto-------------------------*/
+    .formulario_contacto{
+        width:90%;
+    }
+    .formulario_contacto textarea{
+        width:100%;
+    }
+}
+
+/* Escritorio pequeño / tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+/*----------------------------Pagina de Inicio-------------------------*/
+    .banner{
+        /*Parallax*/
+        /* background-attachment: fixed; */
+        background-size: 150%;
+        background-position:40% 40%;
+        background-repeat: repeat;
+    }
+    .banner-description h1{
+        font-weight: 600;
+        font-size: 7em;
+    
+    }
+
+
+/*----------------------------Pagina de Nosotros-------------------------*/
+
+    .primerFondoNosotros{
+        background-image: url('img/fondo9.jpg'); 
+        background-size: 120%;
+    }
+
+    .etiqueta-horario{
+        width: 430px;
+        border:2px solid #000;
+    } 
+    
+    .etiqueta-horario>.table{
+        width:200px !important;
+        display:none;
+
+    }
+
+    .etiqueta-horario>img{
+        display:block;
+        width:400px;
+    }
+
+/*----------------------------Pagina de Contacto-------------------------*/
+    .formulario_contacto{
+        width:90%;
+    }
+    .formulario_contacto textarea{
+        width:100%;
+    }
+}
+
+/* Tablets y phablets */
+@media only screen and (min-width: 576px) and (max-width: 767px){
+/*----------------------------Pagina de Inicio-------------------------*/
+    .banner{
+        /*Parallax*/
+        /* background-attachment: fixed; */
+        background-size: 140%;
+        background-position:40% 40%;
+        background-repeat: repeat;
+    }
+
+    .banner-description h1{
+        font-weight: 600;
+        font-size: 5.5em;
+    }
+
+    
+
+/*----------------------------Pagina de Servicios-------------------------*/
+    
+    .contenido-inicio-hovers{
+        background-size: 130%;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+
+    .contenido_inicio{
+        height:1150px;
+        /* border:2px solid #000; */
+        /* background-color:black; */
+    }
+    
+    .contenido_inicio-descripcion{
+        height:450px;
+        /* border:2px solid red; */
+
+    }
+    
+    .contenido_inicio-descripcion>.col{
+        height:450px;
+        /* border:2px solid yellow; */
+
+    }
+    
+    .contenido-inicio-hovers>.row{
+        height:700px;
+        /* border:2px solid green; */
+
+    }
+
+/*----------------------------Pagina de Nosotros-------------------------*/
+
+    .primerFondoNosotros{
+        width: 100%;
+        background-image: url('img/fondo9.jpg'); 
+        background-size: 160%;
+        background-position:70% 20%;
+        background-repeat: no-repeat;
+    }
+
+
+    /* seccion del mapa */
+
+    .section-map{
+        height:930px;
+        /* background-color:#000; */
+    }
+    .section-map>.container-fluid>.row{
+        height:450px;
+        /* border:2px solid red; */
+    }
+    .section-map>.container-fluid>.row>.d-flex{
+        height:450px;
+        /* border:2px solid green; */
+
+    }
+
+    iframe{
+        height:350px;
+    }
+
+/*----------------------------Pagina de Contacto-------------------------*/
+
+    .section-contact{
+        height:1120px;
+    }
+
+    .section-contact>.container-fluid>.row{
+        height:560px;
+    }
+
+    .section-contact>.container-fluid>.row>.col{
+        height:560px;
+    }
+
+    .section-contact>.container-fluid>.row>.col>.row>.col{
+        height:560px;
+    }
+
+
+    /* .formulario_contacto{
+        width:90%;
+    }*/
+
+    .formulario_contacto textarea{
+        width:100%;
+        height:100px;
+    }
+    form{
+        height:400px;
+    }
+}
+
+/*Celulares*/
+@media only screen and (max-width: 575px){
+/*----------------------------Pagina de Inicio-------------------------*/
+    
+    .banner{
+        /*Parallax*/
+        /* background-attachment: fixed; */
+        background-size: 200%;
+        background-position:40% 40%;
+        background-repeat: repeat;
+    }
+
+    .banner-description h1{
+        font-weight: 600;
+        font-size: 4em;
+    }
+
+
+
+    /*----------------------------Pagina de Servicios-------------------------*/
+
+    .contenido-inicio-hovers{
+        background-size: 130%;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+
+    .contenido_inicio{
+        height:1150px;
+        /* border:2px solid #000; */
+        /* background-color:black; */
+    }
+
+    .contenido_inicio-descripcion{
+        height:450px;
+        /* border:2px solid red; */
+
+    }
+
+    .contenido_inicio-descripcion>.col{
+        height:450px;
+        /* border:2px solid yellow; */
+
+    }
+
+    .contenido-inicio-hovers>.row{
+        height:700px;
+        /* border:2px solid green; */
+
+    }
+
+    /*----------------------------Pagina de Nosotros-------------------------*/
+
+    .primerFondoNosotros{
+        width: 100%;
+        background-image: url('img/fondo9.jpg'); 
+        background-size: 160%;
+        background-position:70% 20%;
+        background-repeat: no-repeat;
+    }
+
+
+    .etiqueta-horario>.table{
+        width:200px !important;
+        display:none;
+
+    }
+
+    .etiqueta-horario>img{
+        display:block;
+        width:100%;
+    }
+
+    /* seccion del mapa */
+
+    .section-map{
+        height:900px;
+        /* background-color:#000; */
+    }
+    .section-map>.container-fluid>.row{
+        height:450px;
+        /* border:2px solid red; */
+    }
+    .section-map>.container-fluid>.row>.d-flex{
+        height:450px;
+        /* border:2px solid green; */
+
+    }
+
+    iframe{
+        height:350px;
+    }
+
+    /*----------------------------Pagina de Contacto-------------------------*/
+
+    .section-contact{
+        height:1120px;
+    }
+
+    .section-contact>.container-fluid>.row{
+        height:560px;
+    }
+
+    .section-contact>.container-fluid>.row>.col{
+        height:560px;
+    }
+
+    .section-contact>.container-fluid>.row>.col>.row>.col{
+        height:560px;
+    }
+
+
+    .formulario_contacto{
+        width:80%;
+    }
+
+    .formulario_contacto textarea{
+        width:100%;
+        height:100px;
+    }
+    form{
+        height:400px;
+    }
+}
+
+/* Mediaqueries especial pantallas pequeñas */
+@media only screen and (max-width:465px){
+/*----------------------------General-------------------------*/
+    p{
+        font-size:14px;
+    }
+
+/*----------------------------Seccion de inicio-------------------------*/
+    .banner{
+        background-size: 240%;
+        background-position:40% 40%;
+    }
+
+    .banner-description h1{
+        font-weight: 600;
+        font-size: 3.5em;
+    }
+
+
+/*----------------------------Seccion de Nosotros-------------------------*/
+  
+    iframe{
+        width:100% !important;
+    }
+/*----------------------------Seccion a Contacto-------------------------*/
+
+    .formulario_contacto{
+        width:90%;
+    }
+    .formulario_contacto input{
+        /* width:120%; */
+        margin:auto;
+    }
+}
+
+/*Celulares angostos*/
+@media only screen and (max-width:365px){
+/*----------------------------General-------------------------*/
+    p{
+        font-size:13px;
+    }
+
+/*----------------------------General-------------------------*/
+    .banner-description a{
+        
+        padding: 0.6em 1em;
+        
+        font-size: 13px;
+    }
+}
+
+/*Celulares extra angostos*/
+@media only screen and (max-width: 352px){
+/*----------------------------General-------------------------*/
+    p{
+        font-size:12px;
+    }
+
+/*----------------------------Seccion de inicio-------------------------*/
+
+    .banner-description{
+        margin:auto;
+        margin-top:25vh;
+    }
+
+    .banner-description h1{
+        font-weight: 600;
+        font-size: 2.5em;
+    }
+    .banner-description h3{
+        font-size: 20px;
+    }
+
+/*----------------------------Seccion a Contacto-------------------------*/
+
+    .formulario_contacto{
+        width:100%;
+    }
+
+    .formulario_contacto input{
+        /* width:120%; */
+        margin:auto;
+    }
+}
