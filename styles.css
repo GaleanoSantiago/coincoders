@@ -47,7 +47,7 @@ body{
     color: #fff;
     /* background-color:#000; */
     /*padding-bottom:1000em;*/
-	/*overflow-x:hidden;  Para ocultar el desplazamiento horizontal*/
+	overflow-x:hidden;  /*Para ocultar el desplazamiento horizontal*/
 
 }
 
